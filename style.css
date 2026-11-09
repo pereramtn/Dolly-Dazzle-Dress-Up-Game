@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: #FFF5FA;
+    color: #44253A;
+}
+
+button,
+a {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.home-page {
+    background: linear-gradient(135deg, #FFF0F6, #F3E9FF);
+    min-height: 100vh;
+}
+
+
+
+.navbar,
+.game-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 7%;
+    background: linear-gradient(135deg, #bd0058, #7900b1);
+    box-shadow: 0 3px 15px rgba(100, 40, 80, 0.08);
+}
+
+.logo,
+.game-logo {
+    font-size: 25px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+.sub-title {
+    color: rgba(220, 220, 220, 0.785);
+    font-size: 16px;
+}
+
+.nav-tag {
+    color: #ffc0f0;
+    font-size: 18px;
+}
+
+
+/* home page */
+.home-container {
+    
+}
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    min-height: 430px;
+    max-width: 1250px;
+    margin: auto;
+    padding: 45px 25px;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.welcome-label {
+    color: #bd0058;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero-text h1 {
+    font-size: clamp(42px, 6vw, 70px);
+    font-weight: bolder;
+    color: #bd0058;
+    margin: 15px 0;
+}
+
+.hero-text h1 span {
+    color: #E65B9D;
+}
+
+.hero-text h2 {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    color: #856D80;
+    line-height: 1.8;
+    max-width: 510px;
+}
+
+.start-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #bd0058, #7900b1);
+    color: white;
+    font-size: 25px;
+    padding: 15px 35px;
+    border-radius: 35px;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 25px;
+    box-shadow: 0 8px 20px rgba(214, 77, 145, 0.25);
+    transition: 0.3s;
+}
+
+.start-btn:hover {
+    transform: translateY(-5px);
+    color: white;
+    box-shadow: 0 12px 25px rgba(214, 77, 145, 0.4);
+}
+
+.start-btn span {
+    margin-left: 10px;
+}
+
+.home-stats {
+    display: flex;
+    gap: 35px;
+    margin-top: 35px;
+}
+
+.home-stats div {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-stats strong {
+    font-size: 25px;
+    color: #D64D91;
+}
+
+.home-stats small {
+    color: #7900b1;
+}
+
+
+.home-stats-btn {
+    border: 2px solid #bd0058;
+    border-radius: 10px;
+    padding: 10px;
+    width: 90px;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* HERO CHARACTER */
+
+.hero-character {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.character-circle {
+    width: 280px;
+    height: 280px;
+    background: linear-gradient(135deg, #bd0058, #7900b1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 35px rgba(155, 90, 160, 0.2);
+}
+
+.hero-doll,img {
+    height: 400px;
+    animation: dollFloat 3s infinite ease-in-out;
+}
+
+.floating-item {
+    position: absolute;
+    font-size: 35px;
+    animation: dollFloat 3s infinite ease-in-out;
+}
+
+.item-one {
+    top: 20px;
+    left: 30px;
+}
+
+.item-two {
+    bottom: 35px;
+    right: 10px;
+}
+
+.item-three {
+    top: 45px;
+    right: 15px;
+}
+
+.item-four {
+    bottom: 20px;
+    left: 10px;
+}
+
+/* animation */
+
+@keyframes dollFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+/* features */
+
+.features-section {
+    margin-top: 45px;
+    text-align: center;
+    padding: 30px;
+    background:linear-gradient(135deg, #bd0058, #7900b1) ;
+}
+
+.features-section h2,
+.level-heading h2 {
+    font-size: 30px;
+    color:#f39ac7 ;
+    margin-bottom: 25px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.feature-card {
+    background: white;
+    padding: 25px 15px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(100, 40, 80, 0.06);
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-7px);
+}
+
+.feature-card div {
+    font-size: 40px;
+}
+
+.feature-card h3 {
+    color: #D64D91;
+    margin: 12px 0;
+}
+
+.feature-card p {
+    color: #8B7786;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: #A58BA0;
+    font-size: 13px;
+}

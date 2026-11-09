@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dolly Dazzle | Dress Up Game</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="game-style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="game-page">
+
+    <nav class="navbar">
+        <div class="logo">Dolly Dazzle <br> <h4 class="sub-title">The Fashion Emergency Center</h4></div>
+        <div class="nav-tag">
+    Dress up • Dream big • Shine bright !
+    <a href="index.html" class="home-link">🏠 Home</a>
+</div>
+        
+    </nav>
+            
+
+
+    <main class="game-container">
+
+        <!-- GAME HEADING -->
+        <section class="game-heading">
+            <p>WELCOME TO YOUR FASHION WORLD 💖</p>
+            <h1>Let's Dress Up!</h1>
+            <span>Choose your favourite outfit and become a fashion star.</span>
+        </section>
+
+        <!-- LEVEL AND EVENT -->
+        <section class="event-section">
+
+            <div>
+                <span class="event-label">YOUR CURRENT CHALLENGE</span>
+                <h2 id="eventName">🎂 Birthday Party</h2>
+                <p id="eventDescription">
+                    Create a beautiful birthday party look Using Dolly Dazzle's Fashion Wardrobe!
+                </p>
+            </div>
+
+            <div class="level-info">
+                <span id="levelNumber">LEVEL 1 / 10</span>
+                <div class="progress-track">
+                    <div id="progressBar"></div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- MAIN GAME AREA -->
+        <section class="game-layout">
+
+            <!-- CHARACTER AREA -->
+            <div class="character-panel">
+
+                <div class="character-panel-heading">
+                    <h2>Hi! I'm Dolly Dazzle!</h2>
+                    <span>✨ Dress up for this special event, gorgeous!</span>
+                </div>
+
+                <div class="character-stage" id="characterStage">
+                   
+                        <img src="Images/background.jpeg" class="background-img">
+
+                    <!-- Main character -->
+                    <img src="Images/game-girl.png" class="character-layer base-character" id="baseCharacter"
+                        alt="Dolly character">
+
+                    <!-- Clothing layers -->
+                    <img class="character-layer outfit-layer" id="frockLayer" alt="">
+                    <img class="character-layer outfit-layer" id="topLayer" alt="">
+                    <img class="character-layer outfit-layer" id="skirtLayer" alt="">
+                    <img class="character-layer outfit-layer" id="shoeLayer" alt="">
+                    <img class="character-layer outfit-layer" id="hairLayer" alt="">
+                    <img class="character-layer outfit-layer" id="accessoryLayer" alt="">
+
+                    
+
+                </div>
+
+                <div class="character-actions">
+
+                    <button class="action-btn random-btn" id="randomBtn">
+                        👗 Random Styles
+                    </button>
+
+                    <button class="action-btn reset-btn" id="resetBtn">
+                        🔄 Reset
+                    </button>
+
+                </div>
+
+                <div id="gameMessage" class="game-message">
+                    Choose your favourite fashion items! 💕
+                </div>
+
+            </div>
+
+            <!-- WARDROBE AREA -->
+            <div class="wardrobe-panel">
+
+                <div class="wardrobe-heading">
+                    <h2> 🚪 Dolly Dazzle's Fashion Wardrobe 🚪</h2>
+                    <p>Click an item to wear it!</p>
+                </div>
+
+                <!-- Categories -->
+                <div class="category-list">
+
+                    <button class="category-btn active" data-category="frocks">
+                        👗 Frocks
+                    </button>
+
+                    <button class="category-btn" data-category="tops">
+                        👚 Tops
+                    </button>
+
+                    <button class="category-btn" data-category="skirts">
+                        🎀 Skirts
+                    </button>
+
+                    <button class="category-btn" data-category="shoes">
+                        👠 Shoes
+                    </button>
+
+                    <button class="category-btn" data-category="hairstyles">
+                        💇 Hair
+                    </button>
+
+                    <button class="category-btn" data-category="accessories">
+                        💍 Accessories
+                    </button>
+
+                </div>
+
+                <!-- Items appear here using JavaScript -->
+                <div class="wardrobe-items" id="wardrobeItems"></div>
+
+                <div class="selected-outfit">
+                    <h3>💖 Your Selected Outfit</h3>
+                    <p id="selectedOutfit">No items selected yet.</p>
+                </div>
+
+                <button class="submit-btn" id="submitBtn">
+                    Submit My Outfit ⭐
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- LEVEL SELECTOR -->
+        <section class="level-section">
+
+            <div class="level-heading">
+                <h2>🌸 Fashion Challenges</h2>
+                <p>Complete each challenge and unlock the next one!</p>
+            </div>
+
+            <div class="level-grid" id="levelGrid"></div>
+
+        </section>
+
+    </main>
+
+    <!-- RESULT MODAL -->
+    <div class="result-overlay" id="resultOverlay">
+
+        <div class="result-card">
+
+            <div class="result-icon" id="resultIcon">🏆</div>
+
+            <h2 id="resultTitle">Amazing Style!</h2>
+
+            <p id="resultDescription"></p>
+
+            <div class="score-circle">
+                <span id="scoreValue">0</span>
+                <small>/100</small>
+            </div>
+
+            <p id="scoreMessage"></p>
+
+            <button class="submit-btn" id="nextLevelBtn">
+                Next Level ➜
+            </button>
+
+            <button class="close-result-btn" id="closeResultBtn">
+                Close
+            </button>
+
+        </div>
+
+    </div>
+
+    <footer class="game-footer">
+        Made with 💗 for Fashion Lovers | Dolly Dazzle © 2026
+    </footer>
+
+    <script src="fashion-game.js"></script>
+
+</body>
+
+</html>
